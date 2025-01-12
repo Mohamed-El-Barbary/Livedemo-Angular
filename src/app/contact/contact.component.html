@@ -1,0 +1,54 @@
+<section class="contact">
+  <app-section-header>
+    <h2 class="text-center">conatct section</h2>
+  </app-section-header>
+  <div class="form-container mt-5 pt-5">
+    <div class="container">
+      <form action="" class="w-50 m-auto" (ngSubmit)="onSubmit($event)">
+        <div class="mb-4 position-relative">
+          <label for="userName" class="form-label top">userName :</label>
+          <input
+            type="text"
+            class="form-control py-3"
+            id="userName"
+            placeholder="userName"
+            (input)="displayLabel($event)"
+          />
+        </div>
+        <div class="mb-4 position-relative">
+          <label for="userAge" class="form-label top">userAge :</label>
+          <input
+            type="number"
+            class="form-control py-3"
+            id="userAge"
+            placeholder="userAge"
+            (input)="displayLabel($event)"
+          />
+        </div>
+        <div class="mb-4 position-relative">
+          <label for="userEmail" class="form-label top">userEmail :</label>
+          <input
+            type="email"
+            class="form-control py-3"
+            id="userEmail"
+            placeholder="userEmail"
+            (input)="displayLabel($event)"
+          />
+        </div>
+        <div class="mb-4 position-relative">
+          <label for="userPassword" class="form-label top">
+            userPassword :
+          </label>
+          <input
+            type="password"
+            class="form-control py-3"
+            id="userPassword"
+            placeholder="userPassword"
+            (input)="displayLabel($event)"
+          />
+        </div>
+        <button type="submit" class="btn mt-2 text-white">send Message</button>
+      </form>
+    </div>
+  </div>
+</section>

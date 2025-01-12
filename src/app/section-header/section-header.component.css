@@ -1,0 +1,9 @@
+.header {
+  color: inherit; 
+}
+.header .line {
+  height: 4px;
+  width: 80px;
+  background-color: #fff;
+}
+

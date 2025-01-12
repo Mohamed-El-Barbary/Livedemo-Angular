@@ -1,0 +1,115 @@
+.portfolio {
+  padding: 100px 0 20px 0;
+}
+.portfolio h2 {
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.portfolio app-section-header .header {
+  color: #2c3e50 !important;
+}
+.portfolio app-section-header .line {
+  background-color: #2c3e50 !important;
+}
+
+.portfolio .card {
+  position: relative;
+  cursor: pointer;
+}
+
+.portfolio .card::before {
+  content: "\2b";
+  position: absolute;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 90px;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.portfolio .card::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(41, 177, 151);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.portfolio .card:hover::before {
+  opacity: 1;
+}
+.portfolio .card:hover:after {
+  opacity: 0.9;
+}
+
+.portfolio .light-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio .light-container .box {
+  width: 40%;
+  height: 40%;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  bottom: 20px;
+}
+.portfolio .light-container .box figure {
+  position: relative;
+}
+
+.portfolio .light-container .box i {
+  color: #1abc9c;
+  font-size: 30px;
+  cursor: pointer;
+  margin: 15px;
+}
+
+.w-600{
+  max-width: 600px;
+}
+
+.portfolio .light-container .box #close {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.portfolio .light-container .box #prev,
+.portfolio .light-container .box #next {
+  position: absolute;
+  top: 50%;
+  transform: translatey(-50%);
+}
+.portfolio .light-container .box #prev {
+  left: 0;
+}
+.portfolio .light-container .box #next {
+  right: 0;
+}
+
+@media screen and (max-width: 640px){
+
+  .portfolio .light-container img {
+    width: 400px;
+  }
+  
+}
